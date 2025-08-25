@@ -1,0 +1,89 @@
+/* RESET DEFAULT STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASIC BODY STYLE */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* HEADER */
+.site-header {
+  background-color: #f8b500;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
+/* NAVBAR USING FLEXBOX */
+.navbar ul {
+  display: flex;           /* put items in a row */
+  justify-content: center; /* center them horizontally */
+  gap: 1.5rem;             /* space between items */
+  list-style: none;        /* remove bullets */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* MAIN LAYOUT USING GRID */
+.main-layout {
+  display: grid;
+  grid-template-columns: 3fr; /* big content + small sidebar */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* CONTENT */
+.card-container {
+  display: flex;      /* flexbox for cards */
+  flex-wrap: wrap;    /* allow wrapping on small screens */
+  gap: 1rem;          /* space between cards */
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1 1 150px;       /* cards grow/shrink and have min size */
+  background: #ffe8c2;
+  padding: 10%;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 100%;
+}
+
+
+/* FOOTER */
+.site-footer {
+  background: #f8b500;
+  color: white;
+  text-align: center;
+  padding: 5%;
+}
+
+/* RESPONSIVENESS */
+
+/* Tablet screens */
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr; /* slightly smaller columns */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .main-layout {
+    grid-template-columns: 1fr; /* only one column */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* stack nav links */
+    align-items: center;
+  }
