@@ -34,7 +34,7 @@ body {
   font-weight: bold;
 }
 
-/* MAIN LAYOUT USING GRID 
+/* MAIN LAYOUT USING GRID  */
 .main-layout {
   display: grid;
   grid-template-columns: 3fr;
@@ -47,7 +47,7 @@ body {
   display: flex;      
   flex-wrap: wrap;   
   gap: 1rem;          
-  margin-top: 1rem;
+  margin: 4rem;
 }
 
 .card {
